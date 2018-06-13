@@ -12,6 +12,7 @@
 		6D11017B20CB70F2003B1805 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D11017920CB70F2003B1805 /* Main.storyboard */; };
 		6D11017D20CB70F2003B1805 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D11017C20CB70F2003B1805 /* Assets.xcassets */; };
 		6D11018020CB70F2003B1805 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D11017E20CB70F2003B1805 /* LaunchScreen.storyboard */; };
+		6D27825920D13D9C00B69577 /* Prog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D27825820D13D9C00B69577 /* Prog.swift */; };
 		6DBEBDBB20CE23AB00E3E69A /* Meditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBEBDBA20CE23AB00E3E69A /* Meditation.swift */; };
 		6DBEBDBD20CF35A300E3E69A /* LiveTv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBEBDBC20CF35A300E3E69A /* LiveTv.swift */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,7 @@
 		6D11017C20CB70F2003B1805 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D11017F20CB70F2003B1805 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D11018120CB70F2003B1805 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D27825820D13D9C00B69577 /* Prog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prog.swift; sourceTree = "<group>"; };
 		6DBEBDBA20CE23AB00E3E69A /* Meditation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meditation.swift; sourceTree = "<group>"; };
 		6DBEBDBC20CF35A300E3E69A /* LiveTv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveTv.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +65,7 @@
 				6DBEBDBA20CE23AB00E3E69A /* Meditation.swift */,
 				6D11017920CB70F2003B1805 /* Main.storyboard */,
 				6DBEBDBC20CF35A300E3E69A /* LiveTv.swift */,
+				6D27825820D13D9C00B69577 /* Prog.swift */,
 				6D11017C20CB70F2003B1805 /* Assets.xcassets */,
 				6D11017E20CB70F2003B1805 /* LaunchScreen.storyboard */,
 				6D11018120CB70F2003B1805 /* Info.plist */,
@@ -145,6 +148,7 @@
 				6DBEBDBD20CF35A300E3E69A /* LiveTv.swift in Sources */,
 				6D11017820CB70F2003B1805 /* ViewController.swift in Sources */,
 				6D11017620CB70F2003B1805 /* AppDelegate.swift in Sources */,
+				6D27825920D13D9C00B69577 /* Prog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +295,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2H3G7T42GD;
 				INFOPLIST_FILE = ni/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +314,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2H3G7T42GD;
 				INFOPLIST_FILE = ni/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
