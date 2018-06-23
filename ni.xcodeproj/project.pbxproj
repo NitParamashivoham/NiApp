@@ -15,6 +15,9 @@
 		6D18E0D420D87BFF001813C2 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D18E0D320D87BFF001813C2 /* Reachability.swift */; };
 		6D27825920D13D9C00B69577 /* Prog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D27825820D13D9C00B69577 /* Prog.swift */; };
 		6D6E04F320DD39B10062934E /* thirdEyeM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D6E04F220DD39B10062934E /* thirdEyeM.mp3 */; };
+		6D6E04FD20DDC51B0062934E /* ndy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D6E04FC20DDC51A0062934E /* ndy.mp3 */; };
+		6D6E04FF20DDC9B70062934E /* enk.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D6E04FE20DDC9B60062934E /* enk.mp3 */; };
+		6D6E050320DDD2E60062934E /* uncluth.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D6E050220DDD2E60062934E /* uncluth.mp3 */; };
 		6D7C5E4820D4A64E00800241 /* Loc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7C5E4720D4A64E00800241 /* Loc.swift */; };
 		6DBEBDBB20CE23AB00E3E69A /* Meditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBEBDBA20CE23AB00E3E69A /* Meditation.swift */; };
 		6DBEBDBD20CF35A300E3E69A /* LiveTv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBEBDBC20CF35A300E3E69A /* LiveTv.swift */; };
@@ -31,6 +34,9 @@
 		6D18E0D320D87BFF001813C2 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		6D27825820D13D9C00B69577 /* Prog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prog.swift; sourceTree = "<group>"; };
 		6D6E04F220DD39B10062934E /* thirdEyeM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = thirdEyeM.mp3; sourceTree = "<group>"; };
+		6D6E04FC20DDC51A0062934E /* ndy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ndy.mp3; sourceTree = "<group>"; };
+		6D6E04FE20DDC9B60062934E /* enk.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = enk.mp3; sourceTree = "<group>"; };
+		6D6E050220DDD2E60062934E /* uncluth.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = uncluth.mp3; sourceTree = "<group>"; };
 		6D7C5E4720D4A64E00800241 /* Loc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loc.swift; sourceTree = "<group>"; };
 		6DBEBDBA20CE23AB00E3E69A /* Meditation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meditation.swift; sourceTree = "<group>"; };
 		6DBEBDBC20CF35A300E3E69A /* LiveTv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveTv.swift; sourceTree = "<group>"; };
@@ -72,7 +78,10 @@
 				6DBEBDBA20CE23AB00E3E69A /* Meditation.swift */,
 				6D11017920CB70F2003B1805 /* Main.storyboard */,
 				6DBEBDBC20CF35A300E3E69A /* LiveTv.swift */,
+				6D6E04FE20DDC9B60062934E /* enk.mp3 */,
+				6D6E050220DDD2E60062934E /* uncluth.mp3 */,
 				6D6E04F220DD39B10062934E /* thirdEyeM.mp3 */,
+				6D6E04FC20DDC51A0062934E /* ndy.mp3 */,
 				6D27825820D13D9C00B69577 /* Prog.swift */,
 				6D11017C20CB70F2003B1805 /* Assets.xcassets */,
 				6D11017E20CB70F2003B1805 /* LaunchScreen.storyboard */,
@@ -145,9 +154,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D6E04FD20DDC51B0062934E /* ndy.mp3 in Resources */,
 				6D11018020CB70F2003B1805 /* LaunchScreen.storyboard in Resources */,
 				6D11017D20CB70F2003B1805 /* Assets.xcassets in Resources */,
+				6D6E04FF20DDC9B70062934E /* enk.mp3 in Resources */,
 				6D6E04F320DD39B10062934E /* thirdEyeM.mp3 in Resources */,
+				6D6E050320DDD2E60062934E /* uncluth.mp3 in Resources */,
 				6D11017B20CB70F2003B1805 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,14 +322,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2H3G7T42GD;
+				DEVELOPMENT_TEAM = 8AQBA9Z5HM;
 				INFOPLIST_FILE = ni/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nitesh.ni;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nitesh.nithyanada;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -329,14 +341,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2H3G7T42GD;
+				DEVELOPMENT_TEAM = 8AQBA9Z5HM;
 				INFOPLIST_FILE = ni/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nitesh.ni;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nitesh.nithyanada;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
