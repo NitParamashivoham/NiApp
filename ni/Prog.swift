@@ -8,17 +8,24 @@
 
 import UIKit
 import WebKit
-class Prog: UIViewController, UIWebViewDelegate {
+class Prog: UIViewController, UIWebViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+   // For collection view -  down scroll
+    var arrayImages = [UIImage]()
+    var arrayID = [String]()
+    var nameArray = [String]()
     
     @IBOutlet weak var webV: WKWebView!
+     @IBOutlet weak var backgroundImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "Background")
-        backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
-        self.view.insertSubview(backgroundImage, at: 0)
+         arrayImages = [#imageLiteral(resourceName: "meditation"),#imageLiteral(resourceName: "satsang"),#imageLiteral(resourceName: "c"),#imageLiteral(resourceName: "third-eye")]
+        arrayID = ["Meditation","Live TV","Home","Locations"]
+        nameArray = ["Meditation","Alive TV", "Home","Centers"]
+        
+      
         
         let url = URL(string: "http://programs.nithyananda.org/")!
         let request = URLRequest(url: url)
@@ -50,8 +57,23 @@ class Prog: UIViewController, UIWebViewDelegate {
         }
     }
     
-   
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return arrayImages.count
+    }
     
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ProgCollectionViewCell
+        let imageView = cell.viewWithTag(1) as! UIImageView
+        imageView.image = arrayImages[indexPath.row]
+        cell.lblPrograms.text! = nameArray[indexPath.row]
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let name = arrayID[indexPath.row]
+        let viewController = storyboard?.instantiateViewController(withIdentifier: name)
+        self.navigationController?.pushViewController(viewController!, animated: true)
+    }
     
 }
 

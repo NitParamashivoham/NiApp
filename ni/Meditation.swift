@@ -8,13 +8,25 @@
 
 import UIKit
 import AVFoundation
-class Meditation: UIViewController {
+class Meditation: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+   
+    var musicPlaying = false
+    var timer:Timer!
+    var arrayImages = [UIImage]()
+    var arrayID = [String]()
+    var nameArray = [String]()
+    
     
     // Declaring Items
-     @IBOutlet weak var button1: UIButton!
+   
+   
+    
+    @IBOutlet weak var currentTime: UILabel!
+    @IBOutlet weak var button1: UIButton!
      @IBOutlet weak var button2: UIButton!
      @IBOutlet weak var button3: UIButton!
      @IBOutlet weak var button4: UIButton!
+     @IBOutlet weak var backgroundImageView: UIImageView!
     
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var progressView1: UIProgressView!
@@ -34,17 +46,19 @@ class Meditation: UIViewController {
     var audioPlayer1 = AVAudioPlayer()
     var audioPlayer2 = AVAudioPlayer()
     var audioPlayer3 = AVAudioPlayer()
-
+    
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "Background")
-        backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
-        self.view.insertSubview(backgroundImage, at: 0)
+        arrayImages = [#imageLiteral(resourceName: "meditation"), #imageLiteral(resourceName: "satsang"), #imageLiteral(resourceName: "c"), #imageLiteral(resourceName: "third-eye")]
+        arrayID = ["Home", "Live TV", "Programs", "Locations"]
+        nameArray = ["Home", "Alive TV", "Programs", "Centers"]
         
+        
+      
         unclutch.layer.cornerRadius = 8.0
         EnK.layer.cornerRadius = 8.0
         nith.layer.cornerRadius = 8
@@ -76,7 +90,7 @@ class Meditation: UIViewController {
         progressView3.subviews[1].clipsToBounds = true
         
         
-        
+       
         // MARK - Calling audio
         
         let url = Bundle.main.url(forResource: "thirdEyeM", withExtension: "mp3")!
@@ -92,6 +106,11 @@ class Meditation: UIViewController {
                 #selector(updateAudioProgressView), userInfo: nil, repeats: true)
             
             progressView.setProgress(Float(audioPlayer.currentTime/audioPlayer.duration), animated: false)
+            
+            
+            
+         
+            
             
             func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
                 
@@ -259,16 +278,21 @@ class Meditation: UIViewController {
     //Addin button 1 manipulation
     
     @IBAction func butonPress1(_ sender: UIButton) {
-        if audioPlayer.isPlaying {
+        if musicPlaying {
             audioPlayer.pause()
             button1.setImage(#imageLiteral(resourceName: "play"), for: UIControlState.normal)
+            musicPlaying = false
         }
         else
         {
             audioPlayer.play()
+            musicPlaying = true
             button1.setImage(#imageLiteral(resourceName: "pause"), for: UIControlState.normal)
+            
+            
         }
     }
+    
     
     
     @IBAction func butonPress2(_ sender: UIButton) {
@@ -346,7 +370,7 @@ class Meditation: UIViewController {
     {
         if audioPlayer3.isPlaying
         {
-            // Update progress
+            // Update progres
             progressView3.setProgress(Float(audioPlayer3.currentTime/audioPlayer3.duration), animated: true)
         }
     }
@@ -365,5 +389,28 @@ class Meditation: UIViewController {
         button1.setImage(#imageLiteral(resourceName: "play"), for: UIControlState.normal)
     }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return  arrayImages.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MeditateCollectionViewCell
+        
+        let imageView =  cell.viewWithTag(1) as! UIImageView
+        
+        imageView.image = arrayImages[indexPath.row]
+        cell.labelM.text! = nameArray[indexPath.row]
+        
+        return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath:   IndexPath) {
+        let name = arrayID[indexPath.row]
+        
+        let viewController = storyboard?.instantiateViewController(withIdentifier: name)
+        self.navigationController?.pushViewController(viewController!, animated: true)
+        
+    }
+    
+   
     
 }

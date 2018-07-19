@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "thrreee.png",
+      "filename" : "thrreee.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "thrreee@2x.jpg",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "thrreee@3x.jpg",
       "scale" : "3x"
     }
   ],

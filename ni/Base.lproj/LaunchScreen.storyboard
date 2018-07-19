@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,56 +15,57 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="Wnc-Os-Zrf">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Be Blissful" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9N-a4-PcB">
-                                <rect key="frame" x="124" y="316.66666666666669" width="126" height="37"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="unnamed" translatesAutoresizingMaskIntoConstraints="NO" id="mmQ-VX-Zax">
+                                <rect key="frame" x="161.5" y="50" width="52" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="7w4-hl-mLN"/>
+                                    <constraint firstAttribute="height" constant="69" id="tHt-Vo-lhi"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Be Blissful" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9N-a4-PcB">
+                                <rect key="frame" x="124.5" y="148" width="126" height="37"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="27"/>
                                 <color key="textColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="शिवोमस्मी" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hra-MA-eyE">
-                                <rect key="frame" x="63.666666666666657" y="361.66666666666669" width="247.99999999999997" height="89"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="शिवोहमश्मि" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hra-MA-eyE">
+                                <rect key="frame" x="16" y="272" width="343" height="89"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="65"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="0.029999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="unnamed" translatesAutoresizingMaskIntoConstraints="NO" id="mmQ-VX-Zax">
-                                <rect key="frame" x="160" y="177" width="55" height="114.66666666666669"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0208994289340102" green="0.0208994289340102" blue="0.0208994289340102" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Wnc-Os-Zrf" secondAttribute="bottom" id="645-Ih-uuP"/>
-                            <constraint firstItem="Wnc-Os-Zrf" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="6xB-NA-dz4"/>
-                            <constraint firstItem="Hra-MA-eyE" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="8T3-Si-ku8"/>
-                            <constraint firstItem="mmQ-VX-Zax" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="160" id="F3N-cz-bPl"/>
-                            <constraint firstAttribute="trailing" secondItem="Wnc-Os-Zrf" secondAttribute="trailing" id="KWz-n0-A7s"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mmQ-VX-Zax" secondAttribute="trailing" constant="160" id="RSr-3o-fNQ"/>
-                            <constraint firstItem="Hra-MA-eyE" firstAttribute="top" secondItem="z9N-a4-PcB" secondAttribute="bottom" constant="8" id="SwY-Nj-UWd"/>
-                            <constraint firstItem="Hra-MA-eyE" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ZKc-0K-5IT"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="z9N-a4-PcB" secondAttribute="trailing" constant="125" id="kPq-By-29q"/>
-                            <constraint firstItem="Wnc-Os-Zrf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="n93-T8-cLt"/>
-                            <constraint firstItem="z9N-a4-PcB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="124" id="oZa-cd-zFm"/>
-                            <constraint firstItem="Hra-MA-eyE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sPq-Mx-r1k"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Hra-MA-eyE" secondAttribute="trailing" id="sYK-17-TaU"/>
-                            <constraint firstItem="z9N-a4-PcB" firstAttribute="top" secondItem="mmQ-VX-Zax" secondAttribute="bottom" constant="25" id="udV-dO-aLd"/>
-                            <constraint firstItem="mmQ-VX-Zax" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="133" id="zZf-NF-lyN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Hra-MA-eyE" secondAttribute="bottom" constant="306" id="6I0-MZ-rVM"/>
+                            <constraint firstItem="Hra-MA-eyE" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="8hc-WU-5Di"/>
+                            <constraint firstItem="Wnc-Os-Zrf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DZB-Wr-HRu"/>
+                            <constraint firstItem="Wnc-Os-Zrf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="HgW-dK-ziZ"/>
+                            <constraint firstItem="mmQ-VX-Zax" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="NOO-Pi-cNd"/>
+                            <constraint firstItem="z9N-a4-PcB" firstAttribute="top" secondItem="mmQ-VX-Zax" secondAttribute="bottom" constant="29" id="Vqd-9O-RCe"/>
+                            <constraint firstItem="z9N-a4-PcB" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="YdQ-wo-Bs0"/>
+                            <constraint firstItem="Hra-MA-eyE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="eOT-RB-XIS"/>
+                            <constraint firstItem="Hra-MA-eyE" firstAttribute="top" secondItem="z9N-a4-PcB" secondAttribute="bottom" constant="87" id="f3u-T1-6HT"/>
+                            <constraint firstItem="Wnc-Os-Zrf" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="hGY-JO-MZy"/>
+                            <constraint firstItem="Wnc-Os-Zrf" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="ndm-Id-svh"/>
+                            <constraint firstItem="mmQ-VX-Zax" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="tWf-Iz-7xA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="50.724637681159422" y="374.18478260869568"/>
+            <point key="canvasLocation" x="48.75" y="372.88732394366195"/>
         </scene>
     </scenes>
     <resources>
-        <image name="splash" width="2714" height="3543"/>
-        <image name="unnamed" width="488" height="679"/>
+        <image name="splash" width="682" height="891"/>
+        <image name="unnamed" width="654" height="910"/>
     </resources>
 </document>

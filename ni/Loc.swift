@@ -9,11 +9,18 @@
 import UIKit
 
 import MapKit
-class Loc: UIViewController, UIWebViewDelegate, UISearchBarDelegate{
+class Loc: UIViewController, UIWebViewDelegate, UISearchBarDelegate, UICollectionViewDataSource, UICollectionViewDelegate{
+   
     
     
+    
+    var arrayImages = [UIImage]()
+    var arrayID = [String]()
+    var nameArray = [String]()
     
     @IBOutlet weak var mapView: MKMapView!
+     @IBOutlet weak var backgroundImageView: UIImageView!
+    
     @IBAction func searchButoon(_ sender: UIBarButtonItem) {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.delegate = self
@@ -94,10 +101,12 @@ class Loc: UIViewController, UIWebViewDelegate, UISearchBarDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "Background")
-        backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
-        self.view.insertSubview(backgroundImage, at: 0)
+        arrayImages = [#imageLiteral(resourceName: "meditation"),#imageLiteral(resourceName: "satsang"),#imageLiteral(resourceName: "c"),#imageLiteral(resourceName: "third-eye")]
+        
+        arrayID = ["Meditation","Live TV","Programs","Home"]
+        nameArray = ["Meditation","Live TV", "Programs","Home"]
+       
+        
         
         let locations = [
             ["title": "Smithers, BC", "subtitle": "  22323 Telkwa High Road, Smithers, BC", "latitude": 54.8471185, "longitude": -127.103886],
@@ -178,7 +187,28 @@ class Loc: UIViewController, UIWebViewDelegate, UISearchBarDelegate{
         
    }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return arrayImages.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
+        
+        let imageView =  cell.viewWithTag(1) as! UIImageView
+        
+        imageView.image = arrayImages[indexPath.row]
+        cell.lbl.text! = nameArray[indexPath.row]
+      
+        return cell
+    }
     
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath:   IndexPath) {
+        let name = arrayID[indexPath.row]
+        
+        let viewController = storyboard?.instantiateViewController(withIdentifier: name)
+        self.navigationController?.pushViewController(viewController!, animated: true)
+        
+    }
     
 }
